@@ -90,19 +90,20 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Mining Operations Locations */}
-      <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-200">
+      <section className="py-16 bg-gradient-to-b from-gray-100 to-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">Featured Mining Operations</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover our advanced mining operations across the Democratic Republic of Congo, 
-              where innovation meets sustainable extraction practices.
-            </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-4">Featured Mining Operations</h2>
+            <div className="flex justify-center space-x-8 mb-8">
+              <button className="text-blue-900 font-semibold border-b-2 border-blue-900 pb-2">DRC</button>
+              <button className="text-gray-600 hover:text-blue-900 transition-colors">Zambia</button>
+              <button className="text-gray-600 hover:text-blue-900 transition-colors">Tanzania</button>
+            </div>
           </div>
           
-          {/* Enhanced Pentagon Grid Layout */}
-          <div className="relative max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+          {/* Pentagon Grid Layout */}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
               {/* Top Row */}
               <div className="md:col-start-2 flex justify-center">
                 <div className="pentagon-container">
@@ -112,10 +113,9 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-xl mb-3">{miningOperations[0].name}</h3>
-                        <p className="text-white/90 text-sm mb-4">{miningOperations[0].description}</p>
-                        <button className="bg-white/20 text-white px-6 py-2 rounded text-sm hover:bg-white/30 transition-colors">
-                          Learn More
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[0].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
                         </button>
                       </div>
                     </div>
@@ -132,10 +132,9 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-xl mb-3">{miningOperations[1].name}</h3>
-                        <p className="text-white/90 text-sm mb-4">{miningOperations[1].description}</p>
-                        <button className="bg-white/20 text-white px-6 py-2 rounded text-sm hover:bg-white/30 transition-colors">
-                          Learn More
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[1].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
                         </button>
                       </div>
                     </div>
@@ -151,10 +150,9 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-xl mb-3">{miningOperations[2].name}</h3>
-                        <p className="text-white/90 text-sm mb-4">{miningOperations[2].description}</p>
-                        <button className="bg-white/20 text-white px-6 py-2 rounded text-sm hover:bg-white/30 transition-colors">
-                          Learn More
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[2].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
                         </button>
                       </div>
                     </div>
@@ -171,10 +169,9 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-xl mb-3">{miningOperations[3].name}</h3>
-                        <p className="text-white/90 text-sm mb-4">{miningOperations[3].description}</p>
-                        <button className="bg-white/20 text-white px-6 py-2 rounded text-sm hover:bg-white/30 transition-colors">
-                          Learn More
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[3].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
                         </button>
                       </div>
                     </div>
@@ -190,10 +187,9 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-xl mb-3">{miningOperations[4].name}</h3>
-                        <p className="text-white/90 text-sm mb-4">{miningOperations[4].description}</p>
-                        <button className="bg-white/20 text-white px-6 py-2 rounded text-sm hover:bg-white/30 transition-colors">
-                          Learn More
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[4].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
                         </button>
                       </div>
                     </div>
