@@ -39,32 +39,17 @@ const Index = () => {
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
       />
-      <main className="pb-16">
+      <main className="relative">
         {renderCurrentPage()}
       </main>
       
       {/* Footer */}
-      <footer className="bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <footer className="bg-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
-                  <span className="text-slate-900 font-bold text-lg">K</span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">KOLWENZI CONGO</h3>
-                  <p className="text-xs text-slate-300">Mining Excellence</p>
-                </div>
-              </div>
-              <p className="text-slate-300 text-sm">
-                Leading Congo's mining future through sustainable extraction and community development.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm text-slate-300">
+              <h3 className="text-lg font-light mb-4">QUICK LINKS</h3>
+              <ul className="space-y-2 text-sm text-blue-200">
                 <li><button onClick={() => setCurrentPage('home')} className="hover:text-white transition-colors">Home</button></li>
                 <li><button onClick={() => setCurrentPage('about')} className="hover:text-white transition-colors">Who We Are</button></li>
                 <li><button onClick={() => setCurrentPage('activities')} className="hover:text-white transition-colors">Mining Operations</button></li>
@@ -73,8 +58,8 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-              <div className="space-y-2 text-sm text-slate-300">
+              <h3 className="text-lg font-light mb-4">CONTACT US</h3>
+              <div className="space-y-2 text-sm text-blue-200">
                 <p>Kolwezi, Lualaba Province</p>
                 <p>Democratic Republic of Congo</p>
                 <p>+243 (0) 81 234 5678</p>
@@ -83,17 +68,28 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">Our Minerals</h4>
-              <div className="flex flex-wrap gap-2">
-                <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs">Copper</span>
-                <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs">Cobalt</span>
-                <span className="bg-gray-500 text-white px-3 py-1 rounded-full text-xs">Zinc</span>
+              <h3 className="text-lg font-light mb-4">FIND US</h3>
+              <div className="w-full h-32 bg-blue-800 rounded"></div>
+            </div>
+            
+            <div>
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+                  <span className="text-white font-bold">K</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-light">KOLWENZI CONGO</h3>
+                  <p className="text-xs text-blue-200">Mining Excellence</p>
+                </div>
               </div>
+              <p className="text-sm text-blue-200 leading-relaxed">
+                We are a general practice mining firm serving Kolwezi and Lualaba areas. We cover many areas of law including Mineral Rights, Environmental Compliance and Business Operations.
+              </p>
             </div>
           </div>
           
-          <div className="border-t border-slate-700 pt-8 mt-8 text-center text-sm text-slate-400">
-            <p>&copy; 2024 Groupe de Société de Minière (SARL) Kolwenzi Congo. All rights reserved.</p>
+          <div className="border-t border-blue-800 pt-8 mt-8 text-center text-sm text-blue-300">
+            <p>© 2024 Groupe de Société de Minière (SARL) Kolwenzi Congo. All Rights Reserved</p>
           </div>
         </div>
       </footer>

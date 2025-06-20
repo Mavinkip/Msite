@@ -36,12 +36,19 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="space-y-16">
-      {/* Header */}
-      <section className="bg-gradient-to-r from-slate-900 to-blue-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Who We Are</h1>
-          <p className="text-xl text-slate-200 max-w-3xl mx-auto">
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section 
+        className="relative h-96 bg-cover bg-center text-white flex items-center"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-blue-900/75"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-light mb-6">Who We Are</h1>
+          <div className="h-1 w-20 bg-white mx-auto mb-6"></div>
+          <p className="text-xl font-light max-w-3xl mx-auto">
             A leading mining company in the Democratic Republic of Congo, 
             dedicated to responsible mineral extraction and community development
           </p>
@@ -49,42 +56,51 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="bg-blue-50 p-8 rounded-2xl">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Mission</h2>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              To responsibly extract and process high-quality minerals while contributing to 
-              the economic development of the Democratic Republic of Congo and improving the 
-              lives of local communities through sustainable mining practices and social investment.
-            </p>
-          </div>
-          <div className="bg-yellow-50 p-8 rounded-2xl">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Vision</h2>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              To become the most respected mining company in Central Africa, known for our 
-              commitment to safety, environmental stewardship, and positive community impact 
-              while delivering exceptional value to our stakeholders.
-            </p>
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-16">
+            <div className="text-center">
+              <h2 className="text-3xl font-light text-blue-900 mb-6">Our Mission</h2>
+              <div className="h-1 w-16 bg-blue-600 mx-auto mb-6"></div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                To responsibly extract and process high-quality minerals while contributing to 
+                the economic development of the Democratic Republic of Congo and improving the 
+                lives of local communities through sustainable mining practices and social investment.
+              </p>
+            </div>
+            <div className="text-center">
+              <h2 className="text-3xl font-light text-blue-900 mb-6">Our Vision</h2>
+              <div className="h-1 w-16 bg-blue-600 mx-auto mb-6"></div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                To become the most respected mining company in Central Africa, known for our 
+                commitment to safety, environmental stewardship, and positive community impact 
+                while delivering exceptional value to our stakeholders.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Core Values */}
-      <section className="bg-slate-50 py-16">
+      <section className="py-20 bg-gradient-to-b from-blue-800 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Core Values</h2>
-            <p className="text-xl text-slate-600">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light mb-4">Our Core Values</h2>
+            <div className="h-1 w-20 bg-white mx-auto mb-6"></div>
+            <p className="text-xl font-light">
               The principles that guide every aspect of our business operations
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-                <value.icon className="text-blue-600 mx-auto mb-4" size={48} />
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{value.title}</h3>
-                <p className="text-slate-600">{value.description}</p>
+              <div key={index} className="text-center group">
+                <div className="w-24 h-24 mx-auto mb-6 border border-white/30 transform rotate-45 flex items-center justify-center group-hover:border-white transition-colors duration-300">
+                  <div className="transform -rotate-45">
+                    <value.icon size={32} className="text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-light mb-3">{value.title}</h3>
+                <p className="text-blue-200 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -92,50 +108,25 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Company History */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Journey</h2>
-          <p className="text-xl text-slate-600">
-            Over 16 years of growth, innovation, and commitment to excellence
-          </p>
-        </div>
-        <div className="relative">
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-0.5 w-1 bg-blue-200 h-full"></div>
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
-                <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                  <div className="bg-white p-6 rounded-lg shadow-lg">
-                    <div className="text-2xl font-bold text-blue-600 mb-2">{item.year}</div>
-                    <p className="text-slate-700">{item.event}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="bg-slate-50 py-16">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Leadership Team</h2>
-            <p className="text-xl text-slate-600">
-              Experienced professionals leading our commitment to excellence
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-light text-blue-900 mb-4">Our Journey</h2>
+            <div className="h-1 w-20 bg-blue-600 mx-auto mb-6"></div>
+            <p className="text-xl text-gray-600 font-light">
+              Over 16 years of growth, innovation, and commitment to excellence
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { name: 'Managing Director', dept: 'Executive Leadership' },
-              { name: 'Operations Director', dept: 'Mining Operations' },
-              { name: 'Community Relations Director', dept: 'Stakeholder Engagement' }
-            ].map((leader, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
-                <div className="w-24 h-24 bg-slate-200 rounded-full mx-auto mb-4"></div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{leader.name}</h3>
-                <p className="text-slate-600">{leader.dept}</p>
+          <div className="space-y-8">
+            {timeline.map((item, index) => (
+              <div key={index} className="flex items-center">
+                <div className="w-24 text-right pr-8">
+                  <div className="text-2xl font-light text-blue-600">{item.year}</div>
+                </div>
+                <div className="w-4 h-4 bg-blue-600 rounded-full"></div>
+                <div className="flex-1 pl-8">
+                  <p className="text-gray-700">{item.event}</p>
+                </div>
               </div>
             ))}
           </div>

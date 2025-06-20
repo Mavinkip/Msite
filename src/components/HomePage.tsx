@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ChevronRight, Pickaxe, Mountain, Shield } from 'lucide-react';
+import { ChevronDown, Pickaxe, Mountain, Shield } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const stats = [
@@ -11,127 +11,160 @@ const HomePage: React.FC = () => {
   ];
 
   const minerals = [
-    { name: 'Copper', description: 'High-grade copper extraction', color: 'bg-orange-500' },
-    { name: 'Cobalt', description: 'Strategic cobalt mining', color: 'bg-blue-500' },
-    { name: 'Zinc', description: 'Premium zinc production', color: 'bg-gray-500' }
+    { 
+      name: 'Copper Mining', 
+      description: 'High-grade copper extraction from our primary concessions',
+      icon: Pickaxe,
+      details: [
+        'Open-pit and underground operations',
+        'Advanced ore processing',
+        'Annual production: 50,000+ tons',
+        'Grade: 3.5-4.2% copper content'
+      ]
+    },
+    { 
+      name: 'Cobalt Production', 
+      description: 'Strategic cobalt mining essential for battery technology',
+      icon: Mountain,
+      details: [
+        'Artisanal mining programs',
+        'Cobalt hydroxide production',
+        'Annual production: 2,500+ tons',
+        'International certifications'
+      ]
+    },
+    { 
+      name: 'Zinc Processing', 
+      description: 'Modern zinc extraction with environmental controls',
+      icon: Shield,
+      details: [
+        'State-of-the-art technology',
+        'Zinc concentrate production',
+        'Environmental impact minimization',
+        'Quality grade: 55-60% zinc'
+      ]
+    }
   ];
 
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              GROUPE DE SOCIETE DE MINEIRE
-              <span className="block text-yellow-400">(SARL)</span>
-              <span className="block text-3xl md:text-4xl mt-4">KOLWENZI CONGO</span>
+    <div className="min-h-screen">
+      {/* Hero Section with Background Image */}
+      <section className="relative h-screen bg-gradient-to-b from-blue-900/90 to-blue-800/90 text-white overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80')",
+          }}
+        />
+        <div className="absolute inset-0 bg-blue-900/75"></div>
+        
+        <div className="relative h-full flex items-center justify-center">
+          <div className="text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 leading-tight">
+              sustainable • innovative • responsible
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-slate-200 leading-relaxed">
-              Leading Congo's mining future through sustainable extraction, 
-              community development, and environmental stewardship
+            <div className="h-1 w-32 bg-white mx-auto mb-8"></div>
+            <p className="text-xl md:text-2xl mb-12 font-light max-w-4xl mx-auto leading-relaxed">
+              We challenge industry standards by combining innovative technology with quality mining service,
+              resulting in effective solutions for our communities.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {minerals.map((mineral, index) => (
-                <div key={index} className={`${mineral.color} text-white px-6 py-3 rounded-full font-semibold text-lg shadow-lg`}>
-                  {mineral.name}
-                </div>
-              ))}
-            </div>
-            <button className="bg-yellow-500 hover:bg-yellow-400 text-slate-900 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-xl">
-              Discover Our Operations
-              <ChevronRight className="inline ml-2" size={20} />
+            <button className="flex items-center mx-auto text-white hover:text-blue-200 transition-colors">
+              <span className="mr-2">read more</span>
+              <ChevronDown size={20} />
             </button>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">{stat.value}</div>
-              <div className="text-slate-600 font-medium">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Our Expertise */}
-      <section className="bg-slate-50 py-16">
+      {/* Mining Operations Section */}
+      <section className="py-20 bg-gradient-to-b from-blue-800 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Mining Expertise</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Located in the mineral-rich Kolwezi region of the Democratic Republic of Congo, 
-              we specialize in responsible extraction of critical minerals
-            </p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light mb-4">Mining Operations</h2>
+            <div className="h-1 w-20 bg-white mx-auto"></div>
           </div>
+          
           <div className="grid md:grid-cols-3 gap-8">
             {minerals.map((mineral, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className={`h-48 ${mineral.color} flex items-center justify-center`}>
-                  <Pickaxe size={64} className="text-white" />
+              <div key={index} className="text-center group">
+                <div className="w-32 h-32 mx-auto mb-8 border-2 border-white/30 transform rotate-45 flex items-center justify-center group-hover:border-white transition-colors duration-300">
+                  <div className="transform -rotate-45">
+                    <mineral.icon size={48} className="text-white" />
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3">{mineral.name}</h3>
-                  <p className="text-slate-600 mb-4">{mineral.description}</p>
-                  <ul className="space-y-2 text-sm text-slate-600">
-                    <li>• High-grade ore extraction</li>
-                    <li>• Advanced processing facilities</li>
-                    <li>• International quality standards</li>
-                    <li>• Sustainable mining practices</li>
-                  </ul>
-                </div>
+                <h3 className="text-2xl font-light mb-4">{mineral.name}</h3>
+                <p className="text-blue-100 mb-6 leading-relaxed">{mineral.description}</p>
+                <ul className="space-y-2 text-sm text-blue-200">
+                  {mineral.details.map((detail, idx) => (
+                    <li key={idx}>{detail}</li>
+                  ))}
+                </ul>
+                <button className="mt-6 px-8 py-2 border border-white/30 text-white hover:bg-white hover:text-blue-900 transition-all duration-300">
+                  read more
+                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Our Commitment */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Our Commitment to Excellence</h2>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <Mountain className="text-blue-600 mt-1" size={24} />
-                <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">Sustainable Mining</h3>
-                  <p className="text-slate-600">Environmental protection and resource conservation at the core of our operations</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <Shield className="text-blue-600 mt-1" size={24} />
-                <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">Safety First</h3>
-                  <p className="text-slate-600">Comprehensive safety protocols ensuring the wellbeing of our workforce</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <ChevronRight className="text-blue-600 mt-1" size={24} />
-                <div>
-                  <h3 className="text-xl font-semibold text-slate-900 mb-2">Community Development</h3>
-                  <p className="text-slate-600">Investing in local communities through education, healthcare, and infrastructure</p>
-                </div>
-              </div>
-            </div>
+      {/* Contact Section */}
+      <section 
+        className="relative py-20 bg-cover bg-center text-white"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-blue-900/80"></div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-light mb-4">Contact Us</h2>
+            <div className="h-1 w-20 bg-white mx-auto mb-8"></div>
+            <p className="text-xl font-light">We'll follow up by phone within 24 hours</p>
           </div>
-          <div className="bg-gradient-to-br from-blue-50 to-slate-100 p-8 rounded-2xl">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Mining in Kolwezi</h3>
-              <p className="text-slate-600 mb-6">
-                Kolwezi is renowned as one of the world's most significant mining regions, 
-                rich in copper and cobalt deposits essential for modern technology and renewable energy.
-              </p>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <div className="text-3xl font-bold text-blue-900 mb-2">Congo's Mining Hub</div>
-                <div className="text-slate-600">Strategic location in the Copperbelt</div>
+          
+          <form className="grid md:grid-cols-3 gap-6 mb-8">
+            <input 
+              type="text" 
+              placeholder="Name" 
+              className="bg-transparent border border-white/30 px-4 py-3 text-white placeholder-white/70 focus:border-white focus:outline-none"
+            />
+            <input 
+              type="email" 
+              placeholder="Email" 
+              className="bg-transparent border border-white/30 px-4 py-3 text-white placeholder-white/70 focus:border-white focus:outline-none"
+            />
+            <input 
+              type="tel" 
+              placeholder="Phone" 
+              className="bg-transparent border border-white/30 px-4 py-3 text-white placeholder-white/70 focus:border-white focus:outline-none"
+            />
+          </form>
+          
+          <textarea 
+            placeholder="Message" 
+            rows={4}
+            className="w-full bg-transparent border border-white/30 px-4 py-3 text-white placeholder-white/70 focus:border-white focus:outline-none mb-8"
+          />
+          
+          <div className="text-center">
+            <button className="px-12 py-3 bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300">
+              submit
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <div className="text-4xl md:text-5xl font-light mb-2">{stat.value}</div>
+                <div className="text-blue-200 font-light">{stat.label}</div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
