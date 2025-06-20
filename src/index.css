@@ -108,11 +108,11 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Pentagon Shapes */
+/* Enhanced Pentagon Shapes */
 .pentagon-container {
-  width: 200px;
-  height: 200px;
-  margin: 20px;
+  width: 280px;
+  height: 280px;
+  margin: 30px;
 }
 
 .pentagon {
@@ -121,6 +121,7 @@
   position: relative;
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
   transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .pentagon-overlay {
@@ -129,7 +130,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(30, 58, 138, 0.6);
+  background: rgba(30, 58, 138, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -138,18 +139,32 @@
 
 .pentagon-content {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   z-index: 10;
+  max-width: 90%;
 }
 
 .pentagon:hover {
   transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 768px) {
   .pentagon-container {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+  }
+  
+  .pentagon-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pentagon-container {
+    width: 180px;
+    height: 180px;
     margin: 10px;
   }
 }
