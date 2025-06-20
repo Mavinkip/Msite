@@ -28,21 +28,35 @@ const Navigation: React.FC<NavigationProps> = ({
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
-          {/* Logo Section */}
-          <div className="flex flex-col items-start">
-            <div className="flex items-center space-x-3 mb-2">
-              <div className="w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">K</span>
-              </div>
-              <div className="text-white">
-                <h1 className="text-xl font-light tracking-wider">KOLWENZI CONGO</h1>
-                <p className="text-xs text-white/80 font-light">Mining & Development</p>
-              </div>
+          {/* Logo Section with Enhanced Visibility */}
+          <div className="flex items-center space-x-3">
+            <div className="w-12 h-12 bg-white/90 backdrop-blur-sm border border-white/30 flex items-center justify-center shadow-lg">
+              <span className="text-blue-900 font-bold text-lg">K</span>
             </div>
-            
-            {/* Vertical Navigation Menu */}
+            <div className="text-white bg-black/30 backdrop-blur-sm px-3 py-2 rounded-lg">
+              <h1 className="text-xl font-bold tracking-wider text-shadow-lg">KOLWENZI CONGO</h1>
+              <p className="text-xs text-white font-medium">Mining & Development</p>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center text-white bg-black/20 backdrop-blur-sm px-4 py-2 rounded-lg">
+            <Phone size={16} className="mr-2" />
+            <span className="text-sm font-medium">+243 (0) 81 234 5678</span>
+          </div>
+
+          {/* Menu Button and Dropdown */}
+          <div className="relative">
+            <button
+              className="p-2 text-white hover:bg-white/10 rounded transition-colors bg-black/20 backdrop-blur-sm"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Vertical Navigation Menu - Positioned under menu icon */}
             {mobileMenuOpen && (
-              <nav className="bg-blue-900/95 backdrop-blur-sm rounded-lg p-4 mt-2 min-w-[250px]">
+              <nav className="absolute top-full right-0 mt-2 bg-blue-900/95 backdrop-blur-sm rounded-lg p-4 min-w-[250px] shadow-xl">
                 <div className="space-y-1">
                   {pages.map(page => (
                     <button
@@ -64,20 +78,6 @@ const Navigation: React.FC<NavigationProps> = ({
               </nav>
             )}
           </div>
-
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center text-white">
-            <Phone size={16} className="mr-2" />
-            <span className="text-sm font-light">+243 (0) 81 234 5678</span>
-          </div>
-
-          {/* Menu Button */}
-          <button
-            className="p-2 text-white hover:bg-white/10 rounded transition-colors"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </div>
     </header>

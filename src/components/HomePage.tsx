@@ -67,15 +67,6 @@ const HomePage: React.FC = () => {
                 Mining excellence is about exploring. It offers a sense of tranquility through extraction, processing, or simply gazing at the earth. This experience connects you to the beauty and mystery of underground life.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <button className="bg-white text-blue-900 px-8 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors flex items-center justify-center">
-                  Explore all
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center">
-                  Explore all
-                </button>
-              </div>
-              
               {/* Social Icons */}
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">

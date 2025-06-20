@@ -37,7 +37,7 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with consistent blue theme */}
       <section 
         className="relative h-96 bg-cover bg-center text-white flex items-center"
         style={{
@@ -56,7 +56,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16">
             <div className="text-center">
@@ -108,7 +108,7 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Company History */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-light text-blue-900 mb-4">Our Journey</h2>
