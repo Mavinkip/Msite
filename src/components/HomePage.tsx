@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ChevronDown, Pickaxe, Mountain, Shield } from 'lucide-react';
+import { ChevronDown, Pickaxe, Mountain, Shield, ArrowRight } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const stats = [
@@ -10,100 +10,202 @@ const HomePage: React.FC = () => {
     { label: 'Community Projects', value: '25+' }
   ];
 
-  const minerals = [
+  const miningOperations = [
     { 
       name: 'Copper Mining', 
       description: 'High-grade copper extraction from our primary concessions',
-      icon: Pickaxe,
-      details: [
-        'Open-pit and underground operations',
-        'Advanced ore processing',
-        'Annual production: 50,000+ tons',
-        'Grade: 3.5-4.2% copper content'
-      ]
+      image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      details: 'Advanced ore processing with 50,000+ tons annually'
     },
     { 
       name: 'Cobalt Production', 
       description: 'Strategic cobalt mining essential for battery technology',
-      icon: Mountain,
-      details: [
-        'Artisanal mining programs',
-        'Cobalt hydroxide production',
-        'Annual production: 2,500+ tons',
-        'International certifications'
-      ]
+      image: 'https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      details: 'Artisanal mining programs with international certifications'
     },
     { 
       name: 'Zinc Processing', 
       description: 'Modern zinc extraction with environmental controls',
-      icon: Shield,
-      details: [
-        'State-of-the-art technology',
-        'Zinc concentrate production',
-        'Environmental impact minimization',
-        'Quality grade: 55-60% zinc'
-      ]
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      details: 'State-of-the-art technology with quality grade 55-60%'
+    },
+    { 
+      name: 'Environmental Safety', 
+      description: 'Sustainable mining practices for future generations',
+      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      details: 'ISO certified environmental management systems'
+    },
+    { 
+      name: 'Community Development', 
+      description: 'Supporting local communities through mining partnerships',
+      image: 'https://images.unsplash.com/photo-1509228627152-72ae9be3fbb8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      details: 'Education and healthcare programs for 25+ communities'
     }
   ];
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section with Background Image */}
-      <section className="relative h-screen bg-gradient-to-b from-blue-900/90 to-blue-800/90 text-white overflow-hidden">
+      {/* Hero Section with Sea Life Style */}
+      <section className="relative h-screen bg-gradient-to-b from-blue-600/90 to-blue-800/90 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80')",
           }}
         />
-        <div className="absolute inset-0 bg-blue-900/75"></div>
+        <div className="absolute inset-0 bg-blue-900/60"></div>
         
-        <div className="relative h-full flex items-center justify-center">
-          <div className="text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 leading-tight">
-              sustainable • innovative • responsible
-            </h1>
-            <div className="h-1 w-32 bg-white mx-auto mb-8"></div>
-            <p className="text-xl md:text-2xl mb-12 font-light max-w-4xl mx-auto leading-relaxed">
-              We challenge industry standards by combining innovative technology with quality mining service,
-              resulting in effective solutions for our communities.
-            </p>
-            <button className="flex items-center mx-auto text-white hover:text-blue-200 transition-colors">
-              <span className="mr-2">read more</span>
-              <ChevronDown size={20} />
-            </button>
+        <div className="relative h-full flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight">
+                INTO THE
+                <br />
+                <span className="text-6xl md:text-8xl font-bold">MINING LIFE</span>
+              </h1>
+              <p className="text-lg md:text-xl mb-8 font-light leading-relaxed text-blue-100">
+                Mining excellence is about exploring. It offers a sense of tranquility through extraction, processing, or simply gazing at the earth. This experience connects you to the beauty and mystery of underground life.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <button className="bg-white text-blue-900 px-8 py-3 rounded-full font-medium hover:bg-blue-50 transition-colors flex items-center justify-center">
+                  Explore all
+                </button>
+                <button className="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center">
+                  Explore all
+                </button>
+              </div>
+              
+              {/* Social Icons */}
+              <div className="flex space-x-4">
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
+                  <span className="text-sm font-bold">f</span>
+                </div>
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
+                  <span className="text-sm font-bold">@</span>
+                </div>
+                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
+                  <span className="text-sm font-bold">▶</span>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown size={32} className="text-white/80" />
         </div>
       </section>
 
-      {/* Mining Operations Section */}
-      <section className="py-20 bg-gradient-to-b from-blue-800 to-blue-900 text-white">
+      {/* Mining Operations Locations */}
+      <section className="py-16 bg-gradient-to-b from-gray-100 to-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light mb-4">Mining Operations</h2>
-            <div className="h-1 w-20 bg-white mx-auto"></div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-4">Featured Mining Operations</h2>
+            <div className="flex justify-center space-x-8 mb-8">
+              <button className="text-blue-900 font-semibold border-b-2 border-blue-900 pb-2">DRC</button>
+              <button className="text-gray-600 hover:text-blue-900 transition-colors">Zambia</button>
+              <button className="text-gray-600 hover:text-blue-900 transition-colors">Tanzania</button>
+            </div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {minerals.map((mineral, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-32 h-32 mx-auto mb-8 border-2 border-white/30 transform rotate-45 flex items-center justify-center group-hover:border-white transition-colors duration-300">
-                  <div className="transform -rotate-45">
-                    <mineral.icon size={48} className="text-white" />
+          {/* Pentagon Grid Layout */}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              {/* Top Row */}
+              <div className="md:col-start-2 flex justify-center">
+                <div className="pentagon-container">
+                  <div 
+                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
+                    style={{ backgroundImage: `url(${miningOperations[0].image})` }}
+                  >
+                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
+                      <div className="pentagon-content">
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[0].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-2xl font-light mb-4">{mineral.name}</h3>
-                <p className="text-blue-100 mb-6 leading-relaxed">{mineral.description}</p>
-                <ul className="space-y-2 text-sm text-blue-200">
-                  {mineral.details.map((detail, idx) => (
-                    <li key={idx}>{detail}</li>
-                  ))}
-                </ul>
-                <button className="mt-6 px-8 py-2 border border-white/30 text-white hover:bg-white hover:text-blue-900 transition-all duration-300">
-                  read more
-                </button>
               </div>
-            ))}
+              
+              {/* Middle Row */}
+              <div className="flex justify-center">
+                <div className="pentagon-container">
+                  <div 
+                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
+                    style={{ backgroundImage: `url(${miningOperations[1].image})` }}
+                  >
+                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
+                      <div className="pentagon-content">
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[1].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex justify-center">
+                <div className="pentagon-container">
+                  <div 
+                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
+                    style={{ backgroundImage: `url(${miningOperations[2].image})` }}
+                  >
+                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
+                      <div className="pentagon-content">
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[2].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Bottom Row */}
+              <div className="md:col-start-2 flex justify-center">
+                <div className="pentagon-container">
+                  <div 
+                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
+                    style={{ backgroundImage: `url(${miningOperations[3].image})` }}
+                  >
+                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
+                      <div className="pentagon-content">
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[3].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="md:col-start-3 flex justify-center">
+                <div className="pentagon-container">
+                  <div 
+                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
+                    style={{ backgroundImage: `url(${miningOperations[4].image})` }}
+                  >
+                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
+                      <div className="pentagon-content">
+                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[4].name}</h3>
+                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
+                          Book tour
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

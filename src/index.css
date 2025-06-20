@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,5 +100,51 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Pentagon Shapes */
+.pentagon-container {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.pentagon {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  transition: all 0.3s ease;
+}
+
+.pentagon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 58, 138, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.pentagon-content {
+  text-align: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.pentagon:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .pentagon-container {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
   }
 }
