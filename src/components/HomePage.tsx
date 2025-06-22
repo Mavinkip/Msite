@@ -96,8 +96,7 @@ const HomePage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-4">Featured Mining Operations</h2>
             <div className="flex justify-center space-x-8 mb-8">
               <button className="text-blue-900 font-semibold border-b-2 border-blue-900 pb-2">DRC</button>
-              <button className="text-gray-600 hover:text-blue-900 transition-colors">Zambia</button>
-              <button className="text-gray-600 hover:text-blue-900 transition-colors">Tanzania</button>
+             
             </div>
           </div>
           

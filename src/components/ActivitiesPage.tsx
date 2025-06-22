@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Pickaxe, Truck, Factory, Shield, Zap, Globe } from 'lucide-react';
 
@@ -7,38 +6,38 @@ const ActivitiesPage: React.FC = () => {
     {
       icon: Pickaxe,
       title: 'Copper Mining',
+      image: '/images/copper.jpg',
       description: 'High-grade copper extraction from our primary concessions in the Kolwezi region',
       details: [
         'Open-pit and underground mining operations',
         'Advanced ore processing and concentration',
         'Annual production capacity: 50,000+ tons',
         'Grade: 3.5-4.2% copper content'
-      ],
-      color: 'bg-orange-500'
+      ]
     },
     {
-      icon: Zap,
+      icon: <Zap className="h-8 w-8 text-blue-600" />,
       title: 'Cobalt Production',
+      image: '/images/cobalt.jpg', // Fixed path
       description: 'Strategic cobalt mining essential for battery technology and renewable energy',
       details: [
         'Artisanal and small-scale mining (ASM) programs',
         'Cobalt hydroxide production',
         'Annual production: 2,500+ tons',
         'International quality certifications'
-      ],
-      color: 'bg-blue-500'
+      ]
     },
     {
       icon: Factory,
       title: 'Zinc Processing',
+      image: '/images/zinc.jpg',
       description: 'Modern zinc extraction and processing facilities with environmental controls',
       details: [
         'State-of-the-art processing technology',
         'Zinc concentrate production',
         'Environmental impact minimization',
         'Quality grade: 55-60% zinc content'
-      ],
-      color: 'bg-gray-500'
+      ]
     }
   ];
 
@@ -79,7 +78,7 @@ const ActivitiesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Mining Operations</h1>
           <p className="text-xl text-slate-200 max-w-3xl mx-auto">
-            Comprehensive mining activities focused on copper, cobalt, and zinc extraction 
+            Comprehensive mining activities focused on copper, cobalt, and zinc extraction
             in the mineral-rich Kolwezi region
           </p>
         </div>
@@ -96,8 +95,12 @@ const ActivitiesPage: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {operations.map((operation, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className={`${operation.color} h-48 flex items-center justify-center`}>
-                <operation.icon size={64} className="text-white" />
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={operation.image}
+                  alt={operation.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">{operation.title}</h3>
@@ -167,11 +170,10 @@ const ActivitiesPage: React.FC = () => {
                     <td className="px-6 py-4 text-sm font-medium text-slate-900">{facility.name}</td>
                     <td className="px-6 py-4 text-sm text-slate-600">{facility.type}</td>
                     <td className="px-6 py-4">
-                      <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                        facility.status === 'Active' 
-                          ? 'bg-green-100 text-green-800' 
+                      <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${facility.status === 'Active'
+                          ? 'bg-green-100 text-green-800'
                           : 'bg-yellow-100 text-yellow-800'
-                      }`}>
+                        }`}>
                         {facility.status}
                       </span>
                     </td>
