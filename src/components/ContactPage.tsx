@@ -38,7 +38,32 @@ const ContactPage: React.FC = () => {
       icon: Phone,
       title: 'Contact',
       details: [
-        '+254 798 708617'
+        '+254 798 708617',
+        'info@groupsocietemineire.com'
+      ]
+    },
+    {
+      icon: MapPin,
+      title: 'Address',
+      details: [
+        'GOMA, DRC',
+        'KOLWEZI, DRC'
+      ]
+    },
+    {
+      icon: Clock,
+      title: 'Working Hours',
+      details: [
+        'Mon - Fri: 8:00 - 17:00',
+        'Sat: 9:00 - 13:00'
+      ]
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      details: [
+        'info@groupsocietemineire.com',
+        'contact@groupsocietemineire.com'
       ]
     }
   ];

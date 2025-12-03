@@ -78,12 +78,12 @@ const Index = () => {
                   <span className="text-white font-bold">K</span>
                 </div>
                 <div>
-                  <h3 className="text-lg font-light">KOLWENZI CONGO</h3>
+                  <h3 className="text-lg font-light">GROUPE DE SOCIETE DE MINEIRE (SARL)</h3>
                   <p className="text-xs text-blue-200">Mining Excellence</p>
                 </div>
               </div>
               <p className="text-sm text-blue-200 leading-relaxed">
-                We are a general practice mining firm serving Kolwezi and Lualaba areas. We cover many areas of law including Mineral Rights, Environmental Compliance and Business Operations.
+                We are a leading mining company with operations in Goma and Kolwezi, DRC. We specialize in responsible mining practices, mineral exploration, and sustainable development.
               </p>
             </div>
           </div>

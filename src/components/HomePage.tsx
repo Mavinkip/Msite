@@ -101,10 +101,10 @@ const HomePage: React.FC = () => {
           </div>
           
           {/* Pentagon Grid Layout */}
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-4xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
               {/* Top Row */}
-              <div className="md:col-start-2 flex justify-center">
+              <div className="md:col-start-1 md:ml-[-50px] flex justify-center">
                 <div className="pentagon-container">
                   <div 
                     className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
@@ -112,10 +112,7 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[0].name}</h3>
-                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
-                          Book tour
-                        </button>
+                        <h3 className="text-white font-semibold text-lg">{miningOperations[0].name}</h3>
                       </div>
                     </div>
                   </div>
@@ -123,7 +120,7 @@ const HomePage: React.FC = () => {
               </div>
               
               {/* Middle Row */}
-              <div className="flex justify-center">
+              <div className="flex justify-center md:ml-[-20px]">
                 <div className="pentagon-container">
                   <div 
                     className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
@@ -131,10 +128,7 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[1].name}</h3>
-                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
-                          Book tour
-                        </button>
+                        <h3 className="text-white font-semibold text-lg">{miningOperations[1].name}</h3>
                       </div>
                     </div>
                   </div>
@@ -149,10 +143,7 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[2].name}</h3>
-                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
-                          Book tour
-                        </button>
+                        <h3 className="text-white font-semibold text-lg">{miningOperations[2].name}</h3>
                       </div>
                     </div>
                   </div>
@@ -160,7 +151,7 @@ const HomePage: React.FC = () => {
               </div>
               
               {/* Bottom Row */}
-              <div className="md:col-start-2 flex justify-center">
+              <div className="md:col-start-2 flex justify-center md:ml-[-20px]">
                 <div className="pentagon-container">
                   <div 
                     className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
@@ -168,10 +159,7 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[3].name}</h3>
-                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
-                          Book tour
-                        </button>
+                        <h3 className="text-white font-semibold text-lg">{miningOperations[3].name}</h3>
                       </div>
                     </div>
                   </div>
@@ -186,10 +174,7 @@ const HomePage: React.FC = () => {
                   >
                     <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
                       <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg mb-2">{miningOperations[4].name}</h3>
-                        <button className="bg-white/20 text-white px-4 py-1 rounded text-sm hover:bg-white/30 transition-colors">
-                          Book tour
-                        </button>
+                        <h3 className="text-white font-semibold text-lg">{miningOperations[4].name}</h3>
                       </div>
                     </div>
                   </div>

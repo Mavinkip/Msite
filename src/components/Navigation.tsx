@@ -34,15 +34,15 @@ const Navigation: React.FC<NavigationProps> = ({
               <span className="text-blue-900 font-bold text-lg">K</span>
             </div>
             <div className="text-white bg-black/30 backdrop-blur-sm px-3 py-2 rounded-lg">
-              <h1 className="text-xl font-bold tracking-wider text-shadow-lg">KOLWENZI CONGO</h1>
-              <p className="text-xs text-white font-medium">Mining & Development</p>
+              <h1 className="text-xl font-bold tracking-wider text-shadow-lg">GROUPE DE SOCIETE DE MINEIRE (SARL)</h1>
+              <p className="text-xs text-white font-medium">Mining Excellence</p>
             </div>
           </div>
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center text-white bg-black/20 backdrop-blur-sm px-4 py-2 rounded-lg">
             <Phone size={16} className="mr-2" />
-            <span className="text-sm font-medium">+243 (0) 81 234 5678</span>
+            <span className="text-sm font-medium">+254 798 708617</span>
           </div>
 
           {/* Menu Button and Dropdown */}
