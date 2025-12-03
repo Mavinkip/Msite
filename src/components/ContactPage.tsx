@@ -3,6 +3,15 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
+  const departments = [
+    { name: 'Customer Support', email: 'support@kolwenzicopper.com' },
+    { name: 'Sales', email: 'sales@kolwenzicopper.com' },
+    { name: 'Human Resources', email: 'hr@kolwenzicopper.com' },
+    { name: 'Technical Support', email: 'tech@kolwenzicopper.com' },
+    { name: 'Investor Relations', email: 'investors@kolwenzicopper.com' },
+    { name: 'General Inquiries', email: 'info@kolwenzicopper.com' },
+  ];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,61 +35,24 @@ const ContactPage: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: MapPin,
-      title: 'Head Office',
-      details: [
-        'Kolwezi, Lualaba Province',
-        'Democratic Republic of Congo',
-        'Avenue des Mines, Sector 5'
-      ]
-    },
-    {
       icon: Phone,
-      title: 'Phone Numbers',
+      title: 'Contact',
       details: [
-        '+243 (0) 81 234 5678',
-        '+243 (0) 99 876 5432',
-        'Fax: +243 (0) 81 234 5679'
-      ]
-    },
-    {
-      icon: Mail,
-      title: 'Email Addresses',
-      details: [
-        'info@kolwenzicongo.cd',
-        'operations@kolwenzicongo.cd',
-        'community@kolwenzicongo.cd'
-      ]
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      details: [
-        'Monday - Friday: 8:00 AM - 5:00 PM',
-        'Saturday: 8:00 AM - 12:00 PM',
-        'Sunday: Closed'
+        '+254 798 708617'
       ]
     }
   ];
 
-  const departments = [
-    { name: 'General Inquiry', email: 'info@kolwenzicongo.cd' },
-    { name: 'Mining Operations', email: 'operations@kolwenzicongo.cd' },
-    { name: 'Community Relations', email: 'community@kolwenzicongo.cd' },
-    { name: 'Environmental Affairs', email: 'environment@kolwenzicongo.cd' },
-    { name: 'Human Resources', email: 'hr@kolwenzicongo.cd' },
-    { name: 'Media & Press', email: 'media@kolwenzicongo.cd' }
-  ];
+
 
   return (
     <div className="space-y-16">
       {/* Header */}
       <section className="bg-gradient-to-r from-slate-900 to-blue-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
+          <h1 className="text-4xl font-bold mb-6">GROUPE DE SOCIETE DE MINEIRE (SARL)</h1>
           <p className="text-xl text-slate-200 max-w-3xl mx-auto">
-            Get in touch with our team for inquiries about our mining operations, 
-            community programs, or partnership opportunities
+            Contact: +254 798 708617
           </p>
         </div>
       </section>
