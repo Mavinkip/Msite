@@ -1,198 +1,236 @@
 
-import React from 'react';
-import { ChevronDown, Pickaxe, Mountain, Shield, ArrowRight } from 'lucide-react';
+import React, { useRef } from 'react';
+import { ChevronDown, ArrowRight, BarChart2, Shield, Globe, Award } from 'lucide-react';
 
 const HomePage: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const trustVideoRef = useRef<HTMLVideoElement>(null);
+
   const stats = [
-    { label: 'Years of Experience', value: '15+' },
-    { label: 'Mining Concessions', value: '8' },
-    { label: 'Local Employees', value: '500+' },
-    { label: 'Community Projects', value: '25+' }
+    { label: 'Ounces of Gold', value: '1M+', icon: <BarChart2 className="w-8 h-8" /> },
+    { label: 'Years of Excellence', value: '20+', icon: <Award className="w-8 h-8" /> },
+    { label: 'Global Presence', value: '5+', icon: <Globe className="w-8 h-8" /> },
+    { label: 'Industry Compliance', value: '100%', icon: <Shield className="w-8 h-8" /> }
   ];
 
-  const miningOperations = [
+  const goldBenefits = [
     { 
-      name: 'Copper Mining', 
-      description: 'High-grade copper extraction from our primary concessions',
-      image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      details: 'Advanced ore processing with 50,000+ tons annually'
+      title: 'Wealth Preservation', 
+      description: 'Gold has maintained its value for centuries, making it the ultimate store of wealth in uncertain times.',
+      image: '/images/gold1.jpg'
     },
     { 
-      name: 'Cobalt Production', 
-      description: 'Strategic cobalt mining essential for battery technology',
-      image: 'https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      details: 'Artisanal mining programs with international certifications'
+      title: 'Inflation Hedge', 
+      description: 'Protect your portfolio against inflation and currency devaluation with tangible gold assets.',
+      image: '/images/gold2.jpg'
     },
     { 
-      name: 'Zinc Processing', 
-      description: 'Modern zinc extraction with environmental controls',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      details: 'State-of-the-art technology with quality grade 55-60%'
-    },
-    { 
-      name: 'Environmental Safety', 
-      description: 'Sustainable mining practices for future generations',
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      details: 'ISO certified environmental management systems'
-    },
-    { 
-      name: 'Community Development', 
-      description: 'Supporting local communities through mining partnerships',
-      image: 'https://images.unsplash.com/photo-1509228627152-72ae9be3fbb8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      details: 'Education and healthcare programs for 25+ communities'
+      title: 'Portfolio Diversification', 
+      description: 'Gold provides essential diversification to balance traditional investments and reduce overall risk.',
+      image: '/images/gold3.jpg'
     }
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section with Sea Life Style */}
-      <section className="relative h-screen bg-gradient-to-b from-blue-600/90 to-blue-800/90 text-white overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80')",
-          }}
-        />
-        <div className="absolute inset-0 bg-blue-900/60"></div>
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section with Gold Background Video */}
+      <section className="relative h-screen overflow-hidden">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/images/gold1.jpg"
+        >
+          <source src="/images/golldbeing made.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/60"></div>
         
         <div className="relative h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div className="max-w-2xl">
-              <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight">
-                INTO THE
+              <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight text-white">
+                Securing Tomorrow's
                 <br />
-                <span className="text-6xl md:text-8xl font-bold">MINING LIFE</span>
+                <span className="text-5xl md:text-7xl font-bold text-yellow-500">Wealth, Today</span>
               </h1>
-              <p className="text-lg md:text-xl mb-8 font-light leading-relaxed text-blue-100">
-                Mining excellence is about exploring. It offers a sense of tranquility through extraction, processing, or simply gazing at the earth. This experience connects you to the beauty and mystery of underground life.
+              <p className="text-lg md:text-xl mb-8 font-light leading-relaxed text-gray-200">
+                Invest in the timeless value of gold with our exclusive opportunities in gold exploration and production. 
+                Partner with us to secure your financial future with tangible assets that stand the test of time.
               </p>
               
-              {/* Social Icons */}
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-                  <span className="text-sm font-bold">f</span>
-                </div>
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-                  <span className="text-sm font-bold">@</span>
-                </div>
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
-                  <span className="text-sm font-bold">▶</span>
-                </div>
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-8 rounded-md transition-colors duration-300 flex items-center">
+                  Mine Gold With Us
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="bg-transparent hover:bg-white/10 text-white border border-white/20 font-medium py-3 px-8 rounded-md transition-colors duration-300">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
         </div>
         
-        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown size={32} className="text-white/80" />
+          <ChevronDown size={32} className="text-yellow-400/80" />
         </div>
       </section>
 
-      {/* Mining Operations Locations */}
-      <section className="py-16 bg-gradient-to-b from-gray-100 to-gray-200">
+      {/* Trust Section with Leadership Video */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-4">Featured Mining Operations</h2>
-            <div className="flex justify-center space-x-8 mb-8">
-              <button className="text-blue-900 font-semibold border-b-2 border-blue-900 pb-2">DRC</button>
-             
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Leadership in <span className="text-yellow-600 font-semibold">Gold Endorsement</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Hear from industry leaders about the enduring value and strategic importance of gold in today's economy.
+            </p>
           </div>
           
-          {/* Pentagon Grid Layout */}
-          <div className="relative max-w-4xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              {/* Top Row */}
-              <div className="md:col-start-1 md:ml-[-50px] flex justify-center">
-                <div className="pentagon-container">
-                  <div 
-                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
-                    style={{ backgroundImage: `url(${miningOperations[0].image})` }}
-                  >
-                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
-                      <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg">{miningOperations[0].name}</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Middle Row */}
-              <div className="flex justify-center md:ml-[-20px]">
-                <div className="pentagon-container">
-                  <div 
-                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
-                    style={{ backgroundImage: `url(${miningOperations[1].image})` }}
-                  >
-                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
-                      <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg">{miningOperations[1].name}</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex justify-center">
-                <div className="pentagon-container">
-                  <div 
-                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
-                    style={{ backgroundImage: `url(${miningOperations[2].image})` }}
-                  >
-                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
-                      <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg">{miningOperations[2].name}</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Bottom Row */}
-              <div className="md:col-start-2 flex justify-center md:ml-[-20px]">
-                <div className="pentagon-container">
-                  <div 
-                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
-                    style={{ backgroundImage: `url(${miningOperations[3].image})` }}
-                  >
-                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
-                      <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg">{miningOperations[3].name}</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="md:col-start-3 flex justify-center">
-                <div className="pentagon-container">
-                  <div 
-                    className="pentagon bg-cover bg-center relative overflow-hidden cursor-pointer group"
-                    style={{ backgroundImage: `url(${miningOperations[4].image})` }}
-                  >
-                    <div className="pentagon-overlay group-hover:bg-blue-900/80 transition-colors duration-300">
-                      <div className="pentagon-content">
-                        <h3 className="text-white font-semibold text-lg">{miningOperations[4].name}</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div className="relative max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
+            <video
+              ref={trustVideoRef}
+              className="w-full h-auto"
+              poster="/images/gold2.jpg"
+              controls
+            >
+              <source src="/images/trumptalking.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <button 
+                onClick={() => trustVideoRef.current?.play()} 
+                className="bg-white/90 hover:bg-white text-yellow-600 rounded-full p-4 shadow-lg hover:scale-105 transition-transform duration-300"
+                aria-label="Play video"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                </svg>
+              </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gold Benefits */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Why <span className="text-yellow-600 font-semibold">Invest in Gold</span> Today?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Gold has been a symbol of wealth and a store of value for thousands of years. 
+              In today's volatile markets, it's more relevant than ever.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {goldBenefits.map((benefit, index) => (
+              <div 
+                key={index} 
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={benefit.image} 
+                    alt={benefit.title}
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            {stats.map((stat, index) => (
+              <div key={index} className="p-6">
+                <div className="text-yellow-400 flex justify-center mb-4">
+                  {stat.icon}
+                </div>
+                <div className="text-4xl font-bold mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-light mb-6">
+            Ready to Secure Your Financial Future with Gold?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join us in unlocking the potential of gold investments. Our expert team is ready to guide you through every step of the process.
+          </p>
+          <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-4 px-10 rounded-md text-lg transition-colors duration-300 inline-flex items-center">
+            Partner With Us
+            <ArrowRight className="ml-3 h-5 w-5" />
+          </button>
+        </div>
+      </section>
+
+      {/* Gold Mining Operations */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Our <span className="text-yellow-600 font-semibold">Gold Operations</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Discover our world-class gold mining operations and investment opportunities
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Exploration',
+                description: 'Advanced geological surveys and exploration techniques to identify high-potential gold deposits.',
+                icon: <Globe className="w-8 h-8 text-yellow-600" />
+              },
+              {
+                title: 'Extraction',
+                description: 'State-of-the-art mining operations with a focus on efficiency and environmental responsibility.',
+                icon: <Award className="w-8 h-8 text-yellow-600" />
+              },
+              {
+                title: 'Refinement',
+                description: 'Advanced refining processes to produce the purest gold bullion and investment products.',
+                icon: <BarChart2 className="w-8 h-8 text-yellow-600" />
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow duration-300">
+                <div className="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mb-6 mx-auto">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{item.title}</h3>
+                <p className="text-gray-600 text-center">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section 
-        className="relative py-20 bg-cover bg-center text-white"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80')",
-        }}
-      >
-        <div className="absolute inset-0 bg-blue-900/80"></div>
+      <section className="relative py-20 bg-gradient-to-br from-gray-900 to-yellow-900 text-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-yellow-800/30"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-light mb-4">Contact Us</h2>
@@ -225,8 +263,8 @@ const HomePage: React.FC = () => {
           />
           
           <div className="text-center">
-            <button className="px-12 py-3 bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300">
-              submit
+            <button className="px-12 py-3 bg-yellow-600 border border-yellow-600 text-white hover:bg-yellow-700 hover:border-yellow-700 transition-all duration-300 rounded-md">
+              Submit
             </button>
           </div>
         </div>

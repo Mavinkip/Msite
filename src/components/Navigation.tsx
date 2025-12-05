@@ -18,10 +18,10 @@ const Navigation: React.FC<NavigationProps> = ({
   const pages = [
     { id: 'home', name: 'Home' },
     { id: 'about', name: 'Who We Are' },
-    { id: 'activities', name: 'Mining Operations' },
+    { id: 'activities', name: 'Gold Operations' },
     { id: 'publications', name: 'Publications' },
-    { id: 'responsibility', name: 'Corporate Responsibility' },
-    { id: 'contact', name: 'Contact Us' }
+    { id: 'responsibility', name: 'Responsibility' },
+    { id: 'contact', name: 'Contact' }
   ];
 
   return (
@@ -30,17 +30,17 @@ const Navigation: React.FC<NavigationProps> = ({
         <div className="flex justify-between items-center py-6">
           {/* Logo Section with Enhanced Visibility */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-white/90 backdrop-blur-sm border border-white/30 flex items-center justify-center shadow-lg">
-              <span className="text-blue-900 font-bold text-lg">K</span>
+            <div className="w-12 h-12 bg-yellow-600/90 backdrop-blur-sm border border-yellow-300/30 flex items-center justify-center shadow-lg">
+              <span className="text-white font-bold text-xl">G</span>
             </div>
             <div className="text-white bg-black/30 backdrop-blur-sm px-3 py-2 rounded-lg">
-              <h1 className="text-xl font-bold tracking-wider text-shadow-lg">GROUPE DE SOCIETE DE MINEIRE (SARL)</h1>
-              <p className="text-xs text-white font-medium">Mining Excellence</p>
+              <h1 className="text-xl font-bold tracking-wider text-shadow-lg">GOLDEN HORIZON MINING</h1>
+              <p className="text-xs text-yellow-300 font-medium">Excellence in Gold Exploration</p>
             </div>
           </div>
 
           {/* Contact Info */}
-          <div className="hidden lg:flex items-center text-white bg-black/20 backdrop-blur-sm px-4 py-2 rounded-lg">
+          <div className="hidden lg:flex items-center text-white bg-yellow-600/80 hover:bg-yellow-700/90 backdrop-blur-sm px-4 py-2 rounded-lg transition-colors duration-300">
             <Phone size={16} className="mr-2" />
             <span className="text-sm font-medium">+254 798 708617</span>
           </div>
@@ -56,7 +56,7 @@ const Navigation: React.FC<NavigationProps> = ({
 
             {/* Vertical Navigation Menu - Positioned under menu icon */}
             {mobileMenuOpen && (
-              <nav className="absolute top-full right-0 mt-2 bg-blue-900/95 backdrop-blur-sm rounded-lg p-4 min-w-[250px] shadow-xl">
+              <nav className="absolute top-full right-0 mt-2 bg-gray-900/95 backdrop-blur-sm rounded-lg p-4 min-w-[250px] shadow-xl border border-yellow-600/30">
                 <div className="space-y-1">
                   {pages.map(page => (
                     <button
@@ -67,8 +67,8 @@ const Navigation: React.FC<NavigationProps> = ({
                       }}
                       className={`block w-full text-left px-3 py-2 text-sm transition-colors duration-200 rounded ${
                         currentPage === page.id 
-                          ? 'text-white bg-white/10' 
-                          : 'text-white/80 hover:text-white hover:bg-white/5'
+                          ? 'text-yellow-400 bg-yellow-600/20' 
+                          : 'text-white/80 hover:text-yellow-300 hover:bg-yellow-600/10'
                       }`}
                     >
                       {page.name}
