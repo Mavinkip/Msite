@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
           className="absolute inset-0 w-full h-full object-cover"
           poster="/images/gold1.jpg"
         >
-          <source src="/images/golldbeing made.mp4" type="video/mp4" />
+          <source src="/images/golldbeingmade.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/60"></div>
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
               <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight text-white">
                 Securing Tomorrow's
                 <br />
-                <span className="text-5xl md:text-7xl font-bold text-yellow-500">Wealth, Today</span>
+                <span className="text-5xl md:text-7xl font-bold text-gold-400">Wealth, Today</span>
               </h1>
               <p className="text-lg md:text-xl mb-8 font-light leading-relaxed text-gray-200">
                 Invest in the timeless value of gold with our exclusive opportunities in gold exploration and production. 
@@ -63,7 +63,7 @@ const HomePage: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-3 px-8 rounded-md transition-colors duration-300 flex items-center">
+                <button className="bg-gold-600 hover:bg-gold-700 text-white font-medium py-3 px-8 rounded-md transition-colors duration-300 flex items-center">
                   Mine Gold With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
@@ -76,7 +76,7 @@ const HomePage: React.FC = () => {
         </div>
         
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown size={32} className="text-yellow-400/80" />
+          <ChevronDown size={32} className="text-gold-400/80" />
         </div>
       </section>
 
@@ -85,7 +85,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              Leadership in <span className="text-yellow-600 font-semibold">Gold Endorsement</span>
+              Leadership in <span className="text-gold-600 font-semibold">Gold Endorsement</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Hear from industry leaders about the enduring value and strategic importance of gold in today's economy.
@@ -105,7 +105,7 @@ const HomePage: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <button 
                 onClick={() => trustVideoRef.current?.play()} 
-                className="bg-white/90 hover:bg-white text-yellow-600 rounded-full p-4 shadow-lg hover:scale-105 transition-transform duration-300"
+                className="bg-white/90 hover:bg-white text-gold-600 rounded-full p-4 shadow-lg hover:scale-105 transition-transform duration-300"
                 aria-label="Play video"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
@@ -122,7 +122,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              Why <span className="text-yellow-600 font-semibold">Invest in Gold</span> Today?
+              Why <span className="text-gold-600 font-semibold">Invest in Gold</span> Today?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Gold has been a symbol of wealth and a store of value for thousands of years. 
@@ -159,7 +159,7 @@ const HomePage: React.FC = () => {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
               <div key={index} className="p-6">
-                <div className="text-yellow-400 flex justify-center mb-4">
+                <div className="text-gold-400 flex justify-center mb-4">
                   {stat.icon}
                 </div>
                 <div className="text-4xl font-bold mb-2">{stat.value}</div>
@@ -179,58 +179,21 @@ const HomePage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join us in unlocking the potential of gold investments. Our expert team is ready to guide you through every step of the process.
           </p>
-          <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-4 px-10 rounded-md text-lg transition-colors duration-300 inline-flex items-center">
+          <button className="bg-gold-600 hover:bg-gold-700 text-white font-medium py-4 px-10 rounded-md text-lg transition-colors duration-300 inline-flex items-center">
             Partner With Us
             <ArrowRight className="ml-3 h-5 w-5" />
           </button>
         </div>
       </section>
 
-      {/* Gold Mining Operations */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              Our <span className="text-yellow-600 font-semibold">Gold Operations</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover our world-class gold mining operations and investment opportunities
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Exploration',
-                description: 'Advanced geological surveys and exploration techniques to identify high-potential gold deposits.',
-                icon: <Globe className="w-8 h-8 text-yellow-600" />
-              },
-              {
-                title: 'Extraction',
-                description: 'State-of-the-art mining operations with a focus on efficiency and environmental responsibility.',
-                icon: <Award className="w-8 h-8 text-yellow-600" />
-              },
-              {
-                title: 'Refinement',
-                description: 'Advanced refining processes to produce the purest gold bullion and investment products.',
-                icon: <BarChart2 className="w-8 h-8 text-yellow-600" />
-              }
-            ].map((item, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow duration-300">
-                <div className="w-16 h-16 bg-yellow-50 rounded-full flex items-center justify-center mb-6 mx-auto">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{item.title}</h3>
-                <p className="text-gray-600 text-center">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
-      <section className="relative py-20 bg-gradient-to-br from-gray-900 to-yellow-900 text-white">
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-yellow-800/30"></div>
+      <section 
+        className="relative py-20 bg-cover bg-center text-white"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-blue-900/80"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-light mb-4">Contact Us</h2>
@@ -263,8 +226,8 @@ const HomePage: React.FC = () => {
           />
           
           <div className="text-center">
-            <button className="px-12 py-3 bg-yellow-600 border border-yellow-600 text-white hover:bg-yellow-700 hover:border-yellow-700 transition-all duration-300 rounded-md">
-              Submit
+            <button className="px-12 py-3 bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 transition-all duration-300">
+              submit
             </button>
           </div>
         </div>
