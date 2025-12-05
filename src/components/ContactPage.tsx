@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-react';
 
@@ -8,8 +7,7 @@ const ContactPage: React.FC = () => {
     { name: 'Sales', email: 'sales@kolwenzicopper.com' },
     { name: 'Human Resources', email: 'hr@kolwenzicopper.com' },
     { name: 'Technical Support', email: 'tech@kolwenzicopper.com' },
-    { name: 'Investor Relations', email: 'investors@kolwenzicopper.com' },
-    { name: 'General Inquiries', email: 'info@kolwenzicopper.com' },
+    { name: 'Investor Relations', email: 'investors@kolwenzicopper.com' }
   ];
 
   const [formData, setFormData] = useState({
@@ -226,31 +224,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Department Contacts */}
-      <section className="bg-slate-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Department Contacts</h2>
-            <p className="text-xl text-slate-600">
-              Direct contact information for specific departments
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {departments.map((dept, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{dept.name}</h3>
-                <a 
-                  href={`mailto:${dept.email}`} 
-                  className="text-blue-600 hover:text-blue-800 text-sm font-medium"
-                >
-                  {dept.email}
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+    
      
     </div>
   );
