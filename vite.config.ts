@@ -14,4 +14,25 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Add base URL for production
+  base: "./",
+  // Configure build options
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Keep original filenames for assets
+          if (assetInfo.name) {
+            const ext = assetInfo.name.split('.').pop()?.toLowerCase();
+            if (ext && ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'mp4', 'webm', 'ogg'].includes(ext)) {
+              return `assets/[name][extname]`;
+            }
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
+  },
 });
