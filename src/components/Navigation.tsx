@@ -34,8 +34,8 @@ const Navigation: React.FC<NavigationProps> = ({
               <span className="text-white font-bold text-xl">G</span>
             </div>
             <div className="text-white bg-black/30 backdrop-blur-sm px-3 py-2 rounded-lg">
-              <h1 className="text-xl font-bold tracking-wider text-shadow-lg">GOLDEN HORIZON MINING</h1>
-              <p className="text-xs text-yellow-300 font-medium">Excellence in Gold Exploration</p>
+              <h1 className="text-xl font-bold tracking-wider text-shadow-lg">GROUPE DE SOCIETE DE MINEIRE (SARL)</h1>
+              <p className="text-xs text-yellow-300 font-medium">Mining Excellence in DRC</p>
             </div>
           </div>
 

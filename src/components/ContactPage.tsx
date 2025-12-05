@@ -39,33 +39,9 @@ const ContactPage: React.FC = () => {
       title: 'Contact',
       details: [
         '+254 798 708617',
-        'info@groupsocietemineire.com'
-      ]
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      details: [
-        'GOMA, DRC',
-        'KOLWEZI, DRC'
-      ]
-    },
-    {
-      icon: Clock,
-      title: 'Working Hours',
-      details: [
-        'Mon - Fri: 8:00 - 17:00',
-        'Sat: 9:00 - 13:00'
-      ]
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      details: [
-        'info@groupsocietemineire.com',
-        'contact@groupsocietemineire.com'
       ]
     }
+   
   ];
 
 
@@ -241,8 +217,7 @@ const ContactPage: React.FC = () => {
                 <div className="flex items-center">
                   <Clock className="text-blue-600 mr-3" size={20} />
                   <div>
-                    <p className="font-semibold text-slate-900">Business Hours</p>
-                    <p className="text-slate-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
+     
                   </div>
                 </div>
               </div>
@@ -276,19 +251,7 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Emergency Contact */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-red-50 border border-red-200 rounded-xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-red-800 mb-4">Emergency Contact</h3>
-          <p className="text-red-700 mb-4">
-            For urgent matters related to mining operations, safety, or environmental concerns
-          </p>
-          <div className="text-xl font-bold text-red-800">
-            Emergency Hotline: +243 (0) 81 EMERGENCY
-          </div>
-          <p className="text-red-600 text-sm mt-2">Available 24/7</p>
-        </div>
-      </section>
+     
     </div>
   );
 };

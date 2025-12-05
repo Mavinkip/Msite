@@ -62,8 +62,8 @@ const Index = () => {
               <div className="space-y-2 text-sm text-blue-200">
                 <p>Kolwezi, Lualaba Province</p>
                 <p>Democratic Republic of Congo</p>
-                <p>+243 (0) 81 234 5678</p>
-                <p>info@kolwenzicongo.cd</p>
+                <p>+254 798 708617</p>
+                
               </div>
             </div>
             
