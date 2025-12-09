@@ -52,30 +52,30 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/60"></div>
         
-        <div className="relative h-full flex items-center">
+        <div className="relative h-full flex items-center pt-20 md:pt-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-6xl font-light mb-6 leading-tight text-white">
+            <div className="max-w-2xl mx-4 md:mx-0">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4 sm:mb-6 leading-tight text-white">
                 Securing Tomorrow's
                 <br />
-                <span className="text-5xl md:text-7xl font-bold text-gold-400">Wealth, Today</span>
+                <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gold-400">Wealth, Today</span>
               </h1>
-              <p className="text-lg md:text-xl mb-8 font-light leading-relaxed text-gray-200">
+              <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 font-light leading-relaxed text-gray-200">
                 Invest in the timeless value of gold with our exclusive opportunities in gold exploration and production. 
                 Partner with us to secure your financial future with tangible assets that stand the test of time.
               </p>
               
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
                 <button 
                   onClick={() => setCurrentPage('mine-with-us')}
-                  className="bg-gold-600 hover:bg-gold-700 text-white font-medium py-3 px-8 rounded-md transition-colors duration-300 flex items-center"
+                  className="bg-gold-600 hover:bg-gold-700 text-white font-medium py-2 sm:py-3 px-6 sm:px-8 rounded-md transition-colors duration-300 flex items-center justify-center"
                 >
                   Mine With Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                 </button>
                 <button 
                   onClick={() => setCurrentPage('about')}
-                  className="bg-transparent hover:bg-white/10 text-white border border-white/20 font-medium py-3 px-8 rounded-md transition-colors duration-300"
+                  className="bg-transparent hover:bg-white/10 text-white border border-white/20 font-medium py-2 sm:py-3 px-6 sm:px-8 rounded-md transition-colors duration-300"
                 >
                   Learn More
                 </button>
@@ -90,7 +90,7 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* Trust Section with Leadership Video */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
@@ -127,7 +127,7 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* Gold Benefits */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
@@ -163,7 +163,7 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -180,7 +180,7 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-light mb-6">
             Ready to Secure Your Financial Future with Gold?

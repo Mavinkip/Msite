@@ -23,6 +23,8 @@ const Navigation: React.FC<NavigationProps> = ({
     { id: 'responsibility', name: 'Responsibility' },
     { id: 'contact', name: 'Contact' }
   ];
+  
+  const isHomePage = currentPage === 'home';
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
@@ -30,13 +32,13 @@ const Navigation: React.FC<NavigationProps> = ({
         <div className="flex justify-between items-center py-4">
           {/* Logo and Contact Section */}
           <div className="flex flex-col items-center">
-            <div className="flex items-center">
+            <div className={`items-center ${isHomePage ? 'flex' : 'hidden'} md:flex`}>
               <img 
                 src="/images/logo.png"
                 alt="Groupe de Societe de Mineire Logo"
-                className="h-60 w-auto cursor-pointer object-contain"
+                className="h-40 md:h-60 w-auto cursor-pointer object-contain"
                 onClick={() => setCurrentPage('home')}
-                style={{ minWidth: '300px' }}
+                style={{ minWidth: '200px', maxWidth: '300px' }}
               />
             </div>
             {/* Contact Info - Moved below logo */}
