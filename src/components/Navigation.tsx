@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Menu, X, Phone, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown, Mail } from 'lucide-react';
 
 interface NavigationProps {
   currentPage: string;
@@ -27,22 +27,25 @@ const Navigation: React.FC<NavigationProps> = ({
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
-          {/* Logo Section with Enhanced Visibility */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-yellow-600/90 backdrop-blur-sm border border-yellow-300/30 flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-xl">G</span>
+        <div className="flex justify-between items-center py-4">
+          {/* Logo and Contact Section */}
+          <div className="flex flex-col items-center">
+            <div className="flex items-center">
+              <img 
+                src="/images/logo.png"
+                alt="Groupe de Societe de Mineire Logo"
+                className="h-60 w-auto cursor-pointer object-contain"
+                onClick={() => setCurrentPage('home')}
+                style={{ minWidth: '300px' }}
+              />
             </div>
-            <div className="text-white bg-black/30 backdrop-blur-sm px-3 py-2 rounded-lg">
-              <h1 className="text-xl font-bold tracking-wider text-shadow-lg">GROUPE DE SOCIETE DE MINEIRE (SARL)</h1>
-              <p className="text-xs text-yellow-300 font-medium">Mining Excellence in DRC</p>
+            {/* Contact Info - Moved below logo */}
+            <div className="hidden lg:flex items-center text-white bg-yellow-600/80 hover:bg-yellow-700/90 backdrop-blur-sm px-4 py-2 rounded-lg transition-colors duration-300 mt-2">
+              <Mail size={16} className="mr-2" />
+              <a href="mailto:info@groupedesocietedemineire.com" className="text-sm font-medium hover:underline">
+                info@groupedesocietedemineire.com
+              </a>
             </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center text-white bg-yellow-600/80 hover:bg-yellow-700/90 backdrop-blur-sm px-4 py-2 rounded-lg transition-colors duration-300">
-            <Phone size={16} className="mr-2" />
-            <span className="text-sm font-medium">+254 798 708617</span>
           </div>
 
           {/* Menu Button and Dropdown */}

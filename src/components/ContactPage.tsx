@@ -34,15 +34,19 @@ const ContactPage: React.FC = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Contact',
+      title: 'Phone',
       details: [
-        '+254 798 708617',
+        '+254 798 708617'
+      ]
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      details: [
+        'info@groupedesocietedemineire.com'
       ]
     }
-   
   ];
-
-
 
   return (
     <div className="space-y-16">

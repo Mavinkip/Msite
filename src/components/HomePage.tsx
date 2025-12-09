@@ -1,8 +1,11 @@
-
 import React, { useRef } from 'react';
 import { ChevronDown, ArrowRight, BarChart2, Shield, Globe, Award } from 'lucide-react';
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+  setCurrentPage: (page: string) => void;
+}
+
+const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const trustVideoRef = useRef<HTMLVideoElement>(null);
 
@@ -63,11 +66,17 @@ const HomePage: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <button className="bg-gold-600 hover:bg-gold-700 text-white font-medium py-3 px-8 rounded-md transition-colors duration-300 flex items-center">
-                  Mine Gold With Us
+                <button 
+                  onClick={() => setCurrentPage('mine-with-us')}
+                  className="bg-gold-600 hover:bg-gold-700 text-white font-medium py-3 px-8 rounded-md transition-colors duration-300 flex items-center"
+                >
+                  Mine With Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
-                <button className="bg-transparent hover:bg-white/10 text-white border border-white/20 font-medium py-3 px-8 rounded-md transition-colors duration-300">
+                <button 
+                  onClick={() => setCurrentPage('about')}
+                  className="bg-transparent hover:bg-white/10 text-white border border-white/20 font-medium py-3 px-8 rounded-md transition-colors duration-300"
+                >
                   Learn More
                 </button>
               </div>
@@ -179,8 +188,11 @@ const HomePage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join us in unlocking the potential of gold investments. Our expert team is ready to guide you through every step of the process.
           </p>
-          <button className="bg-gold-600 hover:bg-gold-700 text-white font-medium py-4 px-10 rounded-md text-lg transition-colors duration-300 inline-flex items-center">
-            Partner With Us
+          <button 
+            onClick={() => setCurrentPage('mine-with-us')}
+            className="bg-gold-600 hover:bg-gold-700 text-white font-medium py-4 px-10 rounded-md text-lg transition-colors duration-300 inline-flex items-center"
+          >
+            Mine With Us
             <ArrowRight className="ml-3 h-5 w-5" />
           </button>
         </div>

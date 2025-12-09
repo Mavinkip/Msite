@@ -7,6 +7,7 @@ import ActivitiesPage from '../components/ActivitiesPage';
 import PublicationsPage from '../components/PublicationsPage';
 import ResponsibilityPage from '../components/ResponsibilityPage';
 import ContactPage from '../components/ContactPage';
+import MineWithUsPage from '../components/MineWithUsPage';
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -15,7 +16,7 @@ const Index = () => {
   const renderCurrentPage = () => {
     switch(currentPage) {
       case 'home':
-        return <HomePage />;
+        return <HomePage setCurrentPage={setCurrentPage} />;
       case 'about':
         return <AboutPage />;
       case 'activities':
@@ -26,8 +27,10 @@ const Index = () => {
         return <ResponsibilityPage />;
       case 'contact':
         return <ContactPage />;
+      case 'mine-with-us':
+        return <MineWithUsPage />;
       default:
-        return <HomePage />;
+        return <HomePage setCurrentPage={setCurrentPage} />;
     }
   };
 
@@ -40,7 +43,7 @@ const Index = () => {
         setMobileMenuOpen={setMobileMenuOpen}
       />
       <main className="relative">
-        {renderCurrentPage()}
+        {React.cloneElement(renderCurrentPage(), { setCurrentPage })}
       </main>
       
       {/* Footer */}
