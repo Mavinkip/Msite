@@ -8,6 +8,7 @@ import PublicationsPage from '../components/PublicationsPage';
 import ResponsibilityPage from '../components/ResponsibilityPage';
 import ContactPage from '../components/ContactPage';
 import MineWithUsPage from '../components/MineWithUsPage';
+import FloatingContact from '../components/FloatingContact';
 
 const Index = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -96,6 +97,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <FloatingContact />
     </div>
   );
 };
