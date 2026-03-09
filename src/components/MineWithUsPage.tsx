@@ -46,10 +46,10 @@ const MineWithUsPage: React.FC = () => {
                 <div className="ml-4">
                   <h3 className="text-sm font-medium text-gold-400">Call Us</h3>
                   <a 
-                    href="tel:+243123456789" 
+                    href="tel:+243901103525" 
                     className="text-lg text-white hover:text-gold-300 transition-colors"
                   >
-                    +243 123 456 789
+                    +243 901 103 525
                   </a>
                 </div>
               </div>

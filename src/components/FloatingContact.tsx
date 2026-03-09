@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
 
-const PHONE_NUMBER = '+254798708617';
+const PHONE_NUMBER = '+243901103525';
 const EMAIL = 'info@groupedesocietedemineire.com';
 const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER.replace(/\D/g, '')}`;
 const MAILTO_URL = `mailto:${EMAIL}`;

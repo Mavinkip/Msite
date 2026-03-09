@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { ChevronDown, ArrowRight, BarChart2, Shield, Globe, Award } from 'lucide-react';
 
 interface HomePageProps {
@@ -8,6 +8,8 @@ interface HomePageProps {
 const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const trustVideoRef = useRef<HTMLVideoElement>(null);
+  const [heroVideoError, setHeroVideoError] = useState(false);
+  const [trustVideoError, setTrustVideoError] = useState(false);
 
   const stats = [
     { label: 'Ounces of Gold', value: '1M+', icon: <BarChart2 className="w-8 h-8" /> },
@@ -38,18 +40,26 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section with Gold Background Video */}
       <section className="relative h-screen overflow-hidden">
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="/images/gold1.jpg"
-        >
-          <source src="/images/golldbeingmade.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {heroVideoError ? (
+          <div
+            className="absolute inset-0 w-full h-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/gold1.jpg')" }}
+          />
+        ) : (
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="/images/gold1.jpg"
+            onError={() => setHeroVideoError(true)}
+          >
+            <source src="/images/golldbeingmade.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/60"></div>
         
         <div className="relative h-full flex items-center pt-20 md:pt-0">
@@ -102,26 +112,36 @@ const HomePage: React.FC<HomePageProps> = ({ setCurrentPage }) => {
           </div>
           
           <div className="relative max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
-            <video
-              ref={trustVideoRef}
-              className="w-full h-auto"
-              poster="/images/gold2.jpg"
-              controls
-            >
-              <source src="/images/trumptalking.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button 
-                onClick={() => trustVideoRef.current?.play()} 
-                className="bg-white/90 hover:bg-white text-gold-600 rounded-full p-4 shadow-lg hover:scale-105 transition-transform duration-300"
-                aria-label="Play video"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                </svg>
-              </button>
-            </div>
+            {trustVideoError ? (
+              <div
+                className="w-full aspect-video bg-cover bg-center rounded-xl"
+                style={{ backgroundImage: "url('/images/gold2.jpg')" }}
+              />
+            ) : (
+              <>
+                <video
+                  ref={trustVideoRef}
+                  className="w-full h-auto"
+                  poster="/images/gold2.jpg"
+                  controls
+                  onError={() => setTrustVideoError(true)}
+                >
+                  <source src="/images/trumptalking.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <button 
+                    onClick={() => trustVideoRef.current?.play()} 
+                    className="bg-white/90 hover:bg-white text-gold-600 rounded-full p-4 shadow-lg hover:scale-105 transition-transform duration-300 pointer-events-auto"
+                    aria-label="Play video"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>

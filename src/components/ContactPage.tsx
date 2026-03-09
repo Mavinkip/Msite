@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, User, MessageSquare } from 'lucide-react';
 
-const PHONE_NUMBER = '+254798708617';
+const PHONE_NUMBER = '+243901103525';
 const EMAIL = 'info@groupedesocietedemineire.com';
 
 function WhatsAppIcon({ className, size = 48 }: { className?: string; size?: number }) {
@@ -53,7 +53,7 @@ const ContactPage: React.FC = () => {
   const mailtoUrl = `mailto:${EMAIL}`;
   const telUrl = `tel:${PHONE_NUMBER}`;
 
-  const displayPhone = '+254 798 708617';
+  const displayPhone = '+243 901 103 525';
 
   const contactInfo = [
     {
@@ -93,7 +93,7 @@ const ContactPage: React.FC = () => {
           <h1 className="text-4xl font-bold mb-6">GROUPE DE SOCIETE DE MINEIRE (SARL)</h1>
           <p className="text-xl text-slate-200 max-w-3xl mx-auto flex items-center justify-center gap-4 flex-wrap">
             <span>Contact:</span>
-            <span className="font-semibold text-white">+254 798 708617</span>
+            <span className="font-semibold text-white">+243 901 103 525</span>
             <a
               href={telUrl}
               className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-colors"

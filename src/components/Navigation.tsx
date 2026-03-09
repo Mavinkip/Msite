@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { Menu, X, Phone, ChevronDown, Mail } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 interface NavigationProps {
   currentPage: string;
@@ -15,6 +15,8 @@ const Navigation: React.FC<NavigationProps> = ({
   mobileMenuOpen,
   setMobileMenuOpen
 }) => {
+  const [logoError, setLogoError] = useState(false);
+  
   const pages = [
     { id: 'home', name: 'Home' },
     { id: 'about', name: 'Who We Are' },
@@ -23,8 +25,6 @@ const Navigation: React.FC<NavigationProps> = ({
     { id: 'responsibility', name: 'Responsibility' },
     { id: 'contact', name: 'Contact' }
   ];
-  
-  const isHomePage = currentPage === 'home';
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
@@ -32,21 +32,27 @@ const Navigation: React.FC<NavigationProps> = ({
         <div className="flex justify-between items-center py-4">
           {/* Logo and Contact Section */}
           <div className="flex flex-col items-center">
-            <div className={`items-center ${isHomePage ? 'flex' : 'hidden'} md:flex`}>
-              <img 
-                src="/images/logo.png"
-                alt="Groupe de Societe de Mineire Logo"
-                className="h-40 md:h-60 w-auto cursor-pointer object-contain"
-                onClick={() => setCurrentPage('home')}
-                style={{ minWidth: '200px', maxWidth: '300px' }}
-              />
-            </div>
-            {/* Contact Info - Moved below logo */}
-            <div className="hidden lg:flex items-center text-white bg-yellow-600/80 hover:bg-yellow-700/90 backdrop-blur-sm px-4 py-2 rounded-lg transition-colors duration-300 mt-2">
-              <Mail size={16} className="mr-2" />
-              <a href="mailto:info@groupedesocietedemineire.com" className="text-sm font-medium hover:underline">
-                info@groupedesocietedemineire.com
-              </a>
+            <div className="items-center flex md:flex">
+              {logoError ? (
+                <div 
+                  onClick={() => setCurrentPage('home')}
+                  className="h-40 md:h-60 flex items-center justify-center cursor-pointer px-4"
+                  style={{ minWidth: '200px', maxWidth: '300px' }}
+                >
+                  <span className="text-white text-xl md:text-2xl font-bold text-center">
+                    GROUPE DE SOCIETE<br />DE MINEIRE
+                  </span>
+                </div>
+              ) : (
+                <img 
+                  src="/images/logo.png"
+                  alt="Groupe de Societe de Mineire Logo"
+                  className="h-40 md:h-60 w-auto cursor-pointer object-contain"
+                  onClick={() => setCurrentPage('home')}
+                  onError={() => setLogoError(true)}
+                  style={{ minWidth: '200px', maxWidth: '300px' }}
+                />
+              )}
             </div>
           </div>
 
