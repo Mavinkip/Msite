@@ -8,7 +8,7 @@ const ActivitiesPage: React.FC = () => {
       title: 'Open-Pit Gold Mining',
       location: 'Western Region',
       status: 'Active',
-      image: '/images/gold1.jpg',
+      image: '/images/open.jpg',
       stats: [
         { label: 'Annual Production', value: '250,000 oz', icon: <BarChart2 className="w-5 h-5" /> },
         { label: 'Reserves', value: '5.2M oz', icon: <Layers className="w-5 h-5" /> },
@@ -20,7 +20,7 @@ const ActivitiesPage: React.FC = () => {
       title: 'Underground Operations',
       location: 'Northern Shaft',
       status: 'Expanding',
-      image: '/images/gold2.jpg',
+      image: '/images/open1.jpg',
       stats: [
         { label: 'Annual Production', value: '180,000 oz', icon: <BarChart2 className="w-5 h-5" /> },
         { label: 'Reserves', value: '3.8M oz', icon: <Layers className="w-5 h-5" /> },
